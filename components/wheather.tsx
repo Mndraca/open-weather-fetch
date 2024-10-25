@@ -37,42 +37,47 @@ export function WeatherForm() {
   };
 
   return (
-    <>
-      <h1>Check the Weather in Your City</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Please enter your</label>
-        <input
-          style={{
-            border: "1px solid black",
-            padding: "5px 10px",
-            margin: "5%",
-          }}
-          type="text"
-          placeholder="City"
-          value={city}
-          onChange={cityOnChange}
-        />
+    <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-xl rounded-lg">
+      <h1 className="text-2xl font-bold text-center mb-6">
+        Check the Weather in Your City
+      </h1>
+      <form onSubmit={handleSubmit} className="p-4 mb-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Please enter your city
+          </label>
+          <input
+            className="w-full border border-pink-400 rounded-md p-2 focus:ring-2 focus:ring-blue-500"
+            type="text"
+            placeholder="City"
+            value={city}
+            onChange={cityOnChange}
+          />
+        </div>
         <button
           type="submit"
-          style={{ border: "1px solid black", padding: "5px 10px" }}
+          className="w-full bg-pink-400 text-white py-2 rounded-md hover:bg-gray-400 transition"
         >
           Submit
         </button>
-        <div>
-          {errorMessage ? (
-            <p style={{ color: "red" }}>{errorMessage}</p>
-          ) : (
-            weather && (
-              <div>
-                <h1>Name: {weather.name}</h1>
-                <h1>Temperature: {weather.main.temp}°C</h1>
-                <h1>Humidity: {weather.main.humidity}%</h1>
-                <h1>Description: {weather.weather[0].description}</h1>
-              </div>
-            )
-          )}
-        </div>
       </form>
-    </>
+
+      <div className="mt-6">
+        {errorMessage ? (
+          <p className="text-red-500 text-center">{errorMessage}</p>
+        ) : (
+          weather && (
+            <div className="mt-6 text-center">
+              <h1 className="text-xl font-semibold">Name: {weather.name}</h1>
+              <p className="text-lg">Temperature: {weather.main.temp}°C</p>
+              <p className="text-lg">Humidity: {weather.main.humidity}%</p>
+              <p className="text-lg">
+                Description: {weather.weather[0].description}
+              </p>
+            </div>
+          )
+        )}
+      </div>
+    </div>
   );
 }
