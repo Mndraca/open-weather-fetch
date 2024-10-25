@@ -52,7 +52,7 @@ export function ResultData() {
               {item.title}
             </h2>
             <p className="text-gray-200  mb-4">{item.excerpt}</p>
-            <p className="text-sm text-gray-500">{fixDate(item.date)}</p>
+            <p className="text-sm text-green-400">{fixDate(item.date)}</p>
           </li>
         ))}
       </ul>
