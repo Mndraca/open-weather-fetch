@@ -46,12 +46,12 @@ export function ResultData() {
         {data.map((item, index) => (
           <li
             key={index}
-            className="bg-black  rounded-lg p-6 hover:bg-gray-600 transition"
+            className="bg-black  rounded-md p-6 hover:bg-gray-600 transition"
           >
             <h2 className="text-xl font-semibold mb-2  text-pink-400">
               {item.title}
             </h2>
-            <p className="text-gray-200 mb-4">{item.excerpt}</p>
+            <p className="text-gray-200  mb-4">{item.excerpt}</p>
             <p className="text-sm text-gray-500">{fixDate(item.date)}</p>
           </li>
         ))}

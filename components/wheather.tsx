@@ -47,7 +47,7 @@ export function WeatherForm() {
             Please enter your city
           </label>
           <input
-            className="w-full border border-pink-400 rounded-md p-2 focus:ring-2 focus:ring-blue-500"
+            className="w-full border border-pink-400 rounded-md p-2 focus:ring-2 focus:ring-pink-600"
             type="text"
             placeholder="City"
             value={city}
@@ -56,7 +56,7 @@ export function WeatherForm() {
         </div>
         <button
           type="submit"
-          className="w-full bg-pink-400 text-white py-2 rounded-md hover:bg-gray-400 transition"
+          className="w-full bg-pink-400 text-white py-2 my-2 rounded-md hover:bg-gray-400 transition"
         >
           Submit
         </button>
