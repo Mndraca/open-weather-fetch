@@ -56,7 +56,7 @@ export function WeatherForm() {
         </div>
         <button
           type="submit"
-          className="w-full bg-pink-400 text-white py-2 my-2 rounded-md hover:bg-gray-400 transition"
+          className="w-full bg-pink-400 text-white py-2 my-2 rounded-md hover:bg-gray-400 transition cursor-pointer"
         >
           Submit
         </button>
