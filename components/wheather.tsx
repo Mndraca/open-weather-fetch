@@ -38,9 +38,10 @@ export function WeatherForm() {
 
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-xl rounded-lg">
-      <h1 className="text-2xl font-bold text-center mb-6">
+      <h1 className="text-2xl font-bold text-center mb-6 animate-wiggle">
         Check the Weather in Your City
       </h1>
+
       <form onSubmit={handleSubmit} className="p-4 mb-4">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">

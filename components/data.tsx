@@ -39,19 +39,20 @@ export function ResultData() {
 
   return (
     <div className="ml-16 mr-16 my-8 py-4">
-      <h1 className="text-3xl font-bold mb-6 text-center  text-pink-400">
+      <h1 className="text-3xl font-bold mb-6 text-center text-pink-400 animate-bounce">
         My Blog Posts
       </h1>
+
       <ul className="space-y-6">
         {data.map((item, index) => (
           <li
             key={index}
-            className="bg-black  rounded-md p-6 hover:bg-gray-600 transition"
+            className="bg-black rounded-md p-6 transition transform hover:bg-gray-600 hover:scale-105 hover:shadow-lg opacity-0 animate-fadeIn delay-[300ms] duration-500 ease-in-out"
           >
-            <h2 className="text-xl font-semibold mb-2  text-pink-400">
+            <h2 className="text-xl font-semibold mb-2 text-pink-400">
               {item.title}
             </h2>
-            <p className="text-gray-200  mb-4">{item.excerpt}</p>
+            <p className="text-gray-200 mb-4">{item.excerpt}</p>
             <p className="text-sm text-green-400">{fixDate(item.date)}</p>
           </li>
         ))}
